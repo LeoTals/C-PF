@@ -26,7 +26,7 @@ public:
     Vector3d    operator + (Vector3d const &);
     Vector3d    operator - (Vector3d const &);
     Vector3d    operator * (double const &);
-    double operator * (Vector3d const &) const;
+    double      operator * (Vector3d const &) const;
     // Dot product of two vectors is a scalar
     Vector3d    operator / (Vector3d const &);
     // OBS! Cross product, division not defined for vectors, simply reusing the operation symbol

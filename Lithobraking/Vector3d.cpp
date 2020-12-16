@@ -72,6 +72,10 @@ double Vector3d::operator*(Vector3d const & otherV) const{
     return x_*otherV[0]+y_*otherV[1]+z_*otherV[2];
 }
 
+/*
+ reminder, this is NOT division, division of vectors
+ does not exist. this is the cross product of two vectors.
+ */
 Vector3d Vector3d::operator/(Vector3d const & otherV) {
     double sx = y_ * otherV[2] - z_ * otherV[1];
     double sy = z_ * otherV[0] - x_ * otherV[2];
@@ -80,6 +84,7 @@ Vector3d Vector3d::operator/(Vector3d const & otherV) {
     return crossproduct;
 }
 
+// Radians!!!
 double Vector3d::angle(Vector3d const & otherV) const{
     double dotproduct = *this * otherV;
     double cosangle = dotproduct / (this->length() * otherV.length());
