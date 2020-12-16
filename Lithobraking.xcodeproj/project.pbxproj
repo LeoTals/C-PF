@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		300DE41725890E8400747D28 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 300DE41625890E8400747D28 /* main.cpp */; };
+		3040C5C1258915B3009B6689 /* body.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3040C5BF258915B3009B6689 /* body.cpp */; };
+		3040C5C4258919B1009B6689 /* Vector3d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3040C5C2258919B1009B6689 /* Vector3d.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,10 @@
 /* Begin PBXFileReference section */
 		300DE41325890E8400747D28 /* Lithobraking */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Lithobraking; sourceTree = BUILT_PRODUCTS_DIR; };
 		300DE41625890E8400747D28 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		3040C5BF258915B3009B6689 /* body.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = body.cpp; sourceTree = "<group>"; };
+		3040C5C0258915B3009B6689 /* body.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = body.hpp; sourceTree = "<group>"; };
+		3040C5C2258919B1009B6689 /* Vector3d.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Vector3d.cpp; sourceTree = "<group>"; };
+		3040C5C3258919B1009B6689 /* Vector3d.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Vector3d.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,10 @@
 			isa = PBXGroup;
 			children = (
 				300DE41625890E8400747D28 /* main.cpp */,
+				3040C5BF258915B3009B6689 /* body.cpp */,
+				3040C5C0258915B3009B6689 /* body.hpp */,
+				3040C5C2258919B1009B6689 /* Vector3d.cpp */,
+				3040C5C3258919B1009B6689 /* Vector3d.hpp */,
 			);
 			path = Lithobraking;
 			sourceTree = "<group>";
@@ -120,6 +130,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				300DE41725890E8400747D28 /* main.cpp in Sources */,
+				3040C5C1258915B3009B6689 /* body.cpp in Sources */,
+				3040C5C4258919B1009B6689 /* Vector3d.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
