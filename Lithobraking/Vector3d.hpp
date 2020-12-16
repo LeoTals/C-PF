@@ -8,32 +8,37 @@
 
 #ifndef Vector3d_hpp
 #define Vector3d_hpp
+#include <stdexcept>
+#include <math.h>
 
-/* very narrowly defined for simplicity's sake. using long doubles for minimal rounding errors*/
+/* very narrowly defined for simplicity's sake. using doubles for minimal rounding errors*/
 
 class Vector3d{
     
 public:
     Vector3d();
-    Vector3d(long double x, long double y, long double z);
+    Vector3d(double x, double y, double z);
     
     Vector3d &  operator = (Vector3d const &);
-    long double operator[] (const int);
+    double operator[] (const int);
+    const double operator[] (const int) const;
     
     Vector3d    operator + (Vector3d const &);
     Vector3d    operator - (Vector3d const &);
-    Vector3d    operator * (long double const &);
-    long double operator * (Vector3d const &);
+    Vector3d    operator * (double const &);
+    double operator * (Vector3d const &) const;
     // Dot product of two vectors is a scalar
     Vector3d    operator / (Vector3d const &);
     // OBS! Cross product, division not defined for vectors, simply reusing the operation symbol
-    long double length() const;
+    
+    double angle(Vector3d const &) const; //radians, as is right and just
+    double length() const;
     
     
 private:
-    long double x_;
-    long double y_;
-    long double z_;
+    double x_;
+    double y_;
+    double z_;
     
 };
 
