@@ -11,6 +11,7 @@
 		3040C5C1258915B3009B6689 /* body.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3040C5BF258915B3009B6689 /* body.cpp */; };
 		3040C5C4258919B1009B6689 /* Vector3d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3040C5C2258919B1009B6689 /* Vector3d.cpp */; };
 		3040C5C7258A2345009B6689 /* rocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3040C5C5258A2345009B6689 /* rocket.cpp */; };
+		305A3B732590C894007D2A28 /* Vector2d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 305A3B712590C894007D2A28 /* Vector2d.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +35,8 @@
 		3040C5C3258919B1009B6689 /* Vector3d.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Vector3d.hpp; sourceTree = "<group>"; };
 		3040C5C5258A2345009B6689 /* rocket.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = rocket.cpp; sourceTree = "<group>"; };
 		3040C5C6258A2345009B6689 /* rocket.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = rocket.hpp; sourceTree = "<group>"; };
+		305A3B712590C894007D2A28 /* Vector2d.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Vector2d.cpp; sourceTree = "<group>"; };
+		305A3B722590C894007D2A28 /* Vector2d.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Vector2d.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +75,8 @@
 				3040C5C6258A2345009B6689 /* rocket.hpp */,
 				3040C5C0258915B3009B6689 /* body.hpp */,
 				3040C5C2258919B1009B6689 /* Vector3d.cpp */,
+				305A3B712590C894007D2A28 /* Vector2d.cpp */,
+				305A3B722590C894007D2A28 /* Vector2d.hpp */,
 				3040C5C3258919B1009B6689 /* Vector3d.hpp */,
 			);
 			path = Lithobraking;
@@ -137,6 +142,7 @@
 				300DE41725890E8400747D28 /* main.cpp in Sources */,
 				3040C5C1258915B3009B6689 /* body.cpp in Sources */,
 				3040C5C4258919B1009B6689 /* Vector3d.cpp in Sources */,
+				305A3B732590C894007D2A28 /* Vector2d.cpp in Sources */,
 				3040C5C7258A2345009B6689 /* rocket.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

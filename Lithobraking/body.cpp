@@ -8,17 +8,19 @@
 
 #include "body.hpp"
 
-Body::Body(double mass, double radius, Vector3d velocity, Vector3d location):
-mass_(mass), radius_(radius), velocity_(velocity), forcesum_(), location_(location) {}
+Body::Body(double mass, double radius, Vector2d velocity, Vector2d location, Vector2d orientation):
+mass_(mass), radius_(radius), velocity_(velocity), location_(location), orientation_(orientation){}
 
-void Body::applyforce(Vector3d force) {
-    forcesum_ = forcesum_ + force;
+Vector2d Body::gravity(Body &P){
+    Vector2d direction = P.getlocation() - location_;
+    double distance = direction.length();
+    Vector2d unitdir = direction/distance;
+    double magnitude = G * mass_ * P.getmass() /(distance*distance);
+    return unitdir * magnitude;
 }
 
-void Body::update(<#double#> dt) {
+void Body::update(double dtms, Body &parent) {
     // F = ma <> a = F/m
-    Vector3d acceleration = forcesum_ * (1/mass_);
-    velocity_ = velocity_ + acceleration * dt;
-    location_ = location_ + velocity_ * dt;
+    
     
 }

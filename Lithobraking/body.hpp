@@ -9,43 +9,35 @@
 #ifndef body_hpp
 #define body_hpp
 
-#include "Vector3d.hpp"
+#include "Vector2d.hpp"
 #include <chrono>
 
 class Body{
   
 public:
+    Body(){}
+    Body(double mass, double radius, Vector2d velocity, Vector2d location, Vector2d orientation);
     
-    Body(double mass, double radius, Vector3d velocity, Vector3d location);
+    double getmass() const{ return mass_; }
+    double getradius() const{ return radius_;}
+    Vector2d getlocation(){ return location_;}
     
-    void applyforce(Vector3d);
-    void update(double);
+    Vector2d gravity(Body &);
+    /*
+     calculates gravity using
+     Newtonian physics
+     */
+    void update(double dtms, Body &);
     
-    double getmass();
-    double getradius();
-    Vector3d getvelocity();
-    Vector3d getforces();
-    Vector3d getlocation();
-    double distance(Body);
-    //Vector3d relativevel(Body);
-    //not needed for this application, but might add later.
     
 private:
+    Vector2d location_;
+    Vector2d velocity_;
+    Vector2d orientation_; //unit vector, size 1
     
-    double mass_; // kilogram
-    double radius_; // m
-    /*
-     all objects will be modeled as uniform balls
-     for simplicity's sake.
-     */
-    Vector3d velocity_; // m/s
-    Vector3d forcesum_; // N
-    Vector3d location_; // m
-    /*
-     To make things more manageable, the centre of the
-     celestial body in Lithobraking will be located at
-     the origin of the coordinate grid.
-     */
+    double mass_;
+    double radius_;
+    static constexpr double G = 6.67384e-11;
     
 };
 

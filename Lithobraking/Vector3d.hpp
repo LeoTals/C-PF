@@ -11,6 +11,11 @@
 #include <stdexcept>
 #include <math.h>
 
+/*
+ not currently used, decided to downgrade to 2d
+ */
+
+
 /* very narrowly defined for simplicity's sake. using doubles for minimal rounding errors*/
 
 class Vector3d{
